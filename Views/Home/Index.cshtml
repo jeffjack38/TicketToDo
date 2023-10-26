@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Ticket>
+
+@{
+    string Overdue(Ticket task) => task.Overdue ? "bg-warning" : "";
+}
+
+<div class="row">
+    <div class="col-sm-2">
+        <form asp-action="Filter" method="post">
+            
+            <div class="form-group">
+                <label>Due Date:</label>
+                <select name="filter" class="form-control" asp-items="@(new SelectList(ViewBag.DueFilters, "Key", "Value", ViewBag.Filters.Due))">
+                    <option value="all">All</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Status:</label>
+                <select name="filter" class="form-control" asp-items="@(new SelectList(ViewBag.Statuses, "StatusId", "Name", ViewBag.Filters.StatusId))">
+                    <option value="all">All</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Filter</button>
+            <a asp-action="Index" asp-route-id="" class="btn btn-primary">Clear</a>
+        </form>
+    </div>
+    <div class="col-sm-10">
+        <a asp-action="Add"><b>Add New Ticket</b></a>
+        <table class="table table-bordered table-striped mt-2">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sprint Number</th>
+                    <th>Point Value</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th class="w-25"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Ticket task in Model)
+                {
+                    string overdue = Overdue(task);
+                    <tr>
+                        <td>@task.Name</td>
+                        <td>@task.Description</td>
+                        <td>@task.SprintNumber</td>
+                        <td>@task.PointValue</td>
+                        <td class="@overdue">
+                            @task.DueDate?.ToShortDateString()
+                        </td>
+                        <td class="@overdue">@task.Status.Name</td>
+                        <td>
+                            <form asp-action="Edit" method="post"
+                                  asp-route-id="@ViewBag.Filters.FilterString" class="mr-2">
+                                <input type="hidden" name="@nameof(Ticket.Id)" value="@task.Id" />
+                                <button type="submit" name="@nameof(Ticket.StatusId)" value="closed" class="btn btn-primary btn-sm">Completed</button>
+                                <button type="submit" class="btn btn-primary btn-sm">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
