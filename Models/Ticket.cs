@@ -27,7 +27,7 @@ namespace TicketToDo.Models
         public string? StatusId { get; set; }
         public Status? Status { get; set; }
 
-        public bool Overdue => Status?.ToLower() == "inprogress" && DueDate < DateTime.Today;
+        public bool Overdue => Status?.ToString() == "inprogress" && DueDate < DateTime.Today;
 
     }
 }
