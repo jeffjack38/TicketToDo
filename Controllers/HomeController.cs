@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using TicketToDo.Models;
@@ -58,6 +59,15 @@ namespace TicketToDo.Controllers
         [HttpPost]
         public IActionResult Add(Ticket task)
         {
+            string key = nameof(Ticket.Name);
+            var val = ModelState.GetValidationState(key);
+            if (val == ModelValidationState.Valid)
+            {
+                if (task.Name == "Jack")
+                {
+                    ModelState.AddModelError(key, "Don't use the name Jack as a name!");
+                }
+            }
             if (ModelState.IsValid)
             {
                 //add the new ToDo object to the ToDos context collection and call the SaveChanges() method to update the databse
