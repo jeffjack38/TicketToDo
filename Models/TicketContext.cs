@@ -17,6 +17,10 @@ namespace TicketToDo.Models
                 new Status { StatusId = "qa", Name = "Quality Assurance" },
                 new Status { StatusId = "done", Name = "Done" }
                 );
+
+           modelBuilder.Entity<Ticket>().HasData(
+                new Ticket { Id = 5, Name = "task", Description = "do this task", DueDate = new DateTime(2023, 12, 21), SprintNumber = 4, PointValue = 2, StatusId = "qa" }
+                );
         }
     }
 }
