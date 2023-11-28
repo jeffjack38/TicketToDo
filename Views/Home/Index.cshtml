@@ -1,4 +1,9 @@
 ﻿@model IEnumerable<Ticket>
+@await Component.InvokeAsync("StatusButton", Status.ToDo)
+@await Component.InvokeAsync("StatusButton", Status.InProgress)
+@await Component.InvokeAsync("StatusButton", Status.QualityAssurance)
+@await Component.InvokeAsync("StatusButton", Status.Done)
+
 
 @{
     string Overdue(Ticket task) => task.Overdue ? "bg-warning" : "";
@@ -55,8 +60,17 @@
                             <form asp-action="Edit" method="post"
                                   asp-route-id="@ViewBag.Filters.FilterString" class="mr-2">
                                 <input type="hidden" name="@nameof(Ticket.Id)" value="@task.Id" />
-                                <button type="submit" name="@nameof(Ticket.StatusId)" value="closed" class="btn btn-primary btn-sm">Completed</button>
+                                <button type="submit" name="@nameof(Ticket.StatusId)" value="done" class="btn btn-primary is-submit-button btn-sm">Completed</button>
                                 <button type="submit" class="btn btn-primary btn-sm">Delete</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form asp-action="ChangeStatus" method="post">
+                                <input type="hidden" name="@nameof(Ticket.Id)" value="@task.Id" />
+                                <button type="submit" name="@nameof(Ticket.StatusId)" value="todo" class="btn btn-info is-submit-button btn-sm">Set ToDo</button>
+                                <button type="submit" name="@nameof(Ticket.StatusId)" value="inprogress" class="btn btn-warning is-submit-button btn-sm">Set In Progress</button>
+                                <button type="submit" name="@nameof(Ticket.StatusId)" value="qa" class="btn btn-secondary is-submit-button btn-sm">Set QA</button>
+                                <button type="submit" name="@nameof(Ticket.StatusId)" value="done" class="btn btn-success is-submit-button btn-sm">Set Done</button>
                             </form>
                         </td>
                     </tr>

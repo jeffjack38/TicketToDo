@@ -94,20 +94,39 @@ namespace TicketToDo.Controllers
         //[FromRoute]  tells MVC to look for its value in a route paramter, 
         public IActionResult Edit([FromRoute] string id, Ticket selected)
         {
+            // Find the existing ticket in the context
+            var existingTicket = context.Tickets.Find(selected.Id);
+
+ 
+
             if (selected.StatusId == null)
             {
-                context.Tickets.Remove(selected);
+                
+                context.Tickets.Remove(existingTicket);
             }
             else
             {
-                string newStatusId = selected.StatusId;
-                selected = context.Tickets.Find(selected.Id);
-                selected.StatusId = newStatusId;
-                context.Tickets.Update(selected);
+                // Update the status of the existing ticket
+                existingTicket.StatusId = selected.StatusId;
+                context.Tickets.Update(existingTicket);
             }
+
             context.SaveChanges();
 
             return RedirectToAction("Index", new { ID = id });
+        }
+
+        [HttpPost]
+        public IActionResult ChangeStatus(string id, string newStatus)
+        {
+            var task = context.Tickets.Find(id);
+            if (task != null)
+            {
+                task.StatusId = newStatus;
+                context.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
         }
 
 

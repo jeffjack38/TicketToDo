@@ -1,4 +1,9 @@
 ﻿@model Ticket
+@await Component.InvokeAsync("StatusButton", Status.ToDo)
+@await Component.InvokeAsync("StatusButton", Status.InProgress)
+@await Component.InvokeAsync("StatusButton", Status.QualityAssurance)
+@await Component.InvokeAsync("StatusButton", Status.Done)
+
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
@@ -46,6 +51,6 @@
         </select>
     </div>
 
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="submit" class="btn btn-primary is-submit-button">Add</button>
     <a asp-action="Index" class="btn btn-primary">Cancel</a>
 </form>
