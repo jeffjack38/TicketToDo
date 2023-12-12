@@ -8,10 +8,17 @@ namespace TicketToDo.Controllers
 {
     public class HomeController : Controller
     {
-
-        //private variable for the database context, the constructor, and the first three action method
+        private readonly ILogger<HomeController> _logger;
         private TicketContext context;
-        public HomeController(TicketContext ctx) => context = ctx;
+
+        public HomeController(ILogger<HomeController> logger, TicketContext ticketContext)
+        {
+            _logger = logger;
+            ticketContext = context;
+        }
+        //private variable for the database context, the constructor, and the first three action method
+        
+        
 
         public IActionResult Index(string id)
         {

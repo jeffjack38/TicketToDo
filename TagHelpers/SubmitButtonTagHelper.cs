@@ -1,17 +1,21 @@
-﻿namespace TicketToDo.TagHelpers
+﻿using Microsoft.AspNetCore.Razor.TagHelpers;
 
-using Microsoft.AspNetCore.Razor.TagHelpers;
-
-[HtmlTargetElement("button", Attributes = "is-submit-button")]
-public class SubmitButtonTagHelper : TagHelper
+namespace TicketToDo.TagHelpers
 {
-    public bool IsSubmitButton { get; set; }
-
-    public override void Process(TagHelperContext context, TagHelperOutput output)
+    [HtmlTargetElement("button", Attributes = "is-submit-button")]
+    public class SubmitButtonTagHelper : TagHelper
     {
-        if (IsSubmitButton)
+        public bool IsSubmitButton { get; set; }
+
+        public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            output.Attributes.SetAttribute("class", "btn btn-primary"); // Add your desired CSS classes
+            if (IsSubmitButton)
+            {
+                output.Attributes.SetAttribute("class", "btn btn-primary"); // Add your desired CSS classes
+            }
         }
     }
 }
+
+
+

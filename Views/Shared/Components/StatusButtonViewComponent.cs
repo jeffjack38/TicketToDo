@@ -1,11 +1,16 @@
-﻿namespace TicketToDo.Views.Shared.Components
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using TicketToDo.Models;
 
-public class StatusButtonViewComponent : ViewComponent
+namespace TicketToDo.Views.Shared.Components
 {
-    public IViewComponentResult Invoke(Status status)
+    public class StatusButtonViewComponent : ViewComponent
     {
-        return View(status.ToString(), status);
+        public IViewComponentResult Invoke(Status status)
+        {
+            return View(status.ToString(), status);
+        }
     }
+
 }
+
+
