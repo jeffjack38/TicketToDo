@@ -9,61 +9,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TicketToDo
 build_property.RootNamespace = TicketToDo
-build_property.ProjectDir = C:\Users\jeade\source\repos\TicketToDo\
+build_property.ProjectDir = C:\Users\jeade\Source\Repos\TicketToDo\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\jeade\source\repos\TicketToDo
+build_property.MSBuildProjectDirectory = C:\Users\jeade\Source\Repos\TicketToDo
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/Home/Add.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/Home/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/Home/Index.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/Home/Privacy.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/Shared/Components/StatusButton/Default.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/Shared/Components/StatusButton/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU3RhdHVzQnV0dG9uXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/Shared/Components/StatusButton/Done.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/Shared/Components/StatusButton/Done.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU3RhdHVzQnV0dG9uXERvbmUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/Shared/Components/StatusButton/InProgress.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/Shared/Components/StatusButton/InProgress.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU3RhdHVzQnV0dG9uXEluUHJvZ3Jlc3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/Shared/Components/StatusButton/QualityAssurance.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/Shared/Components/StatusButton/QualityAssurance.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU3RhdHVzQnV0dG9uXFF1YWxpdHlBc3N1cmFuY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/Shared/Components/StatusButton/ToDo.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/Shared/Components/StatusButton/ToDo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU3RhdHVzQnV0dG9uXFRvRG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/Shared/Error.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/_ViewImports.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/_ViewStart.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jeade/source/repos/TicketToDo/Views/Shared/_Layout.cshtml]
+[C:/Users/jeade/Source/Repos/TicketToDo/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-vlskk3bz3i

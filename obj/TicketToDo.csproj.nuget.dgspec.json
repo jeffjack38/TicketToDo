@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeade\\source\\repos\\TicketToDo\\TicketToDo.csproj": {}
+    "C:\\Users\\jeade\\Source\\Repos\\TicketToDo\\TicketToDo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeade\\source\\repos\\TicketToDo\\TicketToDo.csproj": {
+    "C:\\Users\\jeade\\Source\\Repos\\TicketToDo\\TicketToDo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeade\\source\\repos\\TicketToDo\\TicketToDo.csproj",
+        "projectUniqueName": "C:\\Users\\jeade\\Source\\Repos\\TicketToDo\\TicketToDo.csproj",
         "projectName": "TicketToDo",
-        "projectPath": "C:\\Users\\jeade\\source\\repos\\TicketToDo\\TicketToDo.csproj",
+        "projectPath": "C:\\Users\\jeade\\Source\\Repos\\TicketToDo\\TicketToDo.csproj",
         "packagesPath": "C:\\Users\\jeade\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeade\\source\\repos\\TicketToDo\\obj\\",
+        "outputPath": "C:\\Users\\jeade\\Source\\Repos\\TicketToDo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jeade\\AppData\\Roaming\\NuGet\\NuGet.Config",
